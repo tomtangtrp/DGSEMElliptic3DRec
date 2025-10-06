@@ -77,7 +77,7 @@ python3 ./scripts/scanSigma.py \
 <img src="./plots/scanSigma_testcase0_k3_SIPG.png" alt="sigma testcase0 k3" width="400"/>
 
 ### Pardiso OMP scaling on Gadi single node intel 8268 processor:testcase0
-<img src="./plots/testcase0_SIPG_k2_Nel4096_walltime_vs_cores.png" alt="omp scaling" width="400"/>
+<img src="./plots/testSolver_sp_walltime_vs_threads_testcase0_method=SIPG_Nel=16x16x16_k=3.png" alt="omp scaling" width="400"/>
 
 
 
