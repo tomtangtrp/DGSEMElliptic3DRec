@@ -1,0 +1,33 @@
+{
+  "alpha": 1.0,
+  "parameters": {
+    "A": 1.0,
+    "x0": 0.50,
+    "y0": 0.50,
+    "z0": 0.50,
+    "sx": 0.30,
+    "sy": 0.20,
+    "sz": 0.25,
+    "alpha": 1.0
+  },
+  "exact": {
+    "u": "A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx) + (y-y0)*(y-y0)/(sy*sy) + (z-z0)*(z-z0)/(sz*sz)))"
+  },
+  "source": "A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx) + (y-y0)*(y-y0)/(sy*sy) + (z-z0)*(z-z0)/(sz*sz))) * (alpha + (1.0/(sx*sx) - ((x-x0)*(x-x0))/((sx*sx)*(sx*sx))) + (1.0/(sy*sy) - ((y-y0)*(y-y0))/((sy*sy)*(sy*sy))) + (1.0/(sz*sz) - ((z-z0)*(z-z0))/((sz*sz)*(sz*sz))))",
+  "dirichlet": {
+    "left":  "A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx) + (y-y0)*(y-y0)/(sy*sy) + (z-z0)*(z-z0)/(sz*sz)))",
+    "right": "A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx) + (y-y0)*(y-y0)/(sy*sy) + (z-z0)*(z-z0)/(sz*sz)))",
+    "bottom":"A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx) + (y-y0)*(y-y0)/(sy*sy) + (z-z0)*(z-z0)/(sz*sz)))",
+    "top":   "A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx) + (y-y0)*(y-y0)/(sy*sy) + (z-z0)*(z-z0)/(sz*sz)))",
+    "back":  "A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx) + (y-y0)*(y-y0)/(sy*sy) + (z-z0)*(z-z0)/(sz*sz)))",
+    "front": "A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx) + (y-y0)*(y-y0)/(sy*sy) + (z-z0)*(z-z0)/(sz*sz)))"
+  },
+  "neumann": {
+    "left":  "((x-x0)/(sx*sx))*A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx)+(y-y0)*(y-y0)/(sy*sy)+(z-z0)*(z-z0)/(sz*sz)))",
+    "right": "-((x-x0)/(sx*sx))*A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx)+(y-y0)*(y-y0)/(sy*sy)+(z-z0)*(z-z0)/(sz*sz)))",
+    "bottom":"((y-y0)/(sy*sy))*A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx)+(y-y0)*(y-y0)/(sy*sy)+(z-z0)*(z-z0)/(sz*sz)))",
+    "top":   "-((y-y0)/(sy*sy))*A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx)+(y-y0)*(y-y0)/(sy*sy)+(z-z0)*(z-z0)/(sz*sz)))",
+    "back":  "((z-z0)/(sz*sz))*A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx)+(y-y0)*(y-y0)/(sy*sy)+(z-z0)*(z-z0)/(sz*sz)))",
+    "front": "-((z-z0)/(sz*sz))*A*exp(-0.5*((x-x0)*(x-x0)/(sx*sx)+(y-y0)*(y-y0)/(sy*sy)+(z-z0)*(z-z0)/(sz*sz)))"
+  }
+}

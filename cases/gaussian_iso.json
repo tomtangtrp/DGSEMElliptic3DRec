@@ -1,0 +1,35 @@
+{
+    "alpha": 1.0,
+    "parameters": {
+      "A": 1.0,
+      "x0": 0.35,
+      "y0": 0.40,
+      "z0": 0.25,
+      "s": 0.20,
+      "alpha": 1.0
+    },
+    "exact": {
+      "u": "A*exp(-0.5*((x-x0)*(x-x0)/(s*s) + (y-y0)*(y-y0)/(s*s) + (z-z0)*(z-z0)/(s*s)))"
+    },
+  
+    "source": "A*exp(-0.5*((x-x0)*(x-x0)/(s*s) + (y-y0)*(y-y0)/(s*s) + (z-z0)*(z-z0)/(s*s))) * ( alpha + 3/(s*s) - ((x-x0)*(x-x0) + (y-y0)*(y-y0) + (z-z0)*(z-z0))/((s*s)*(s*s)) )",
+  
+    "dirichlet": {
+      "left":  "A*exp(-0.5*((x-x0)*(x-x0)/(s*s) + (y-y0)*(y-y0)/(s*s) + (z-z0)*(z-z0)/(s*s)))",
+      "right": "A*exp(-0.5*((x-x0)*(x-x0)/(s*s) + (y-y0)*(y-y0)/(s*s) + (z-z0)*(z-z0)/(s*s)))",
+      "bottom":"A*exp(-0.5*((x-x0)*(x-x0)/(s*s) + (y-y0)*(y-y0)/(s*s) + (z-z0)*(z-z0)/(s*s)))",
+      "top":   "A*exp(-0.5*((x-x0)*(x-x0)/(s*s) + (y-y0)*(y-y0)/(s*s) + (z-z0)*(z-z0)/(s*s)))",
+      "back":  "A*exp(-0.5*((x-x0)*(x-x0)/(s*s) + (y-y0)*(y-y0)/(s*s) + (z-z0)*(z-z0)/(s*s)))",
+      "front": "A*exp(-0.5*((x-x0)*(x-x0)/(s*s) + (y-y0)*(y-y0)/(s*s) + (z-z0)*(z-z0)/(s*s)))"
+    },
+  
+    "neumann": {
+      "left":  "((x-x0)/(s*s))*A*exp(-0.5*((x-x0)*(x-x0)/(s*s)+(y-y0)*(y-y0)/(s*s)+(z-z0)*(z-z0)/(s*s)))",
+      "right": "-((x-x0)/(s*s))*A*exp(-0.5*((x-x0)*(x-x0)/(s*s)+(y-y0)*(y-y0)/(s*s)+(z-z0)*(z-z0)/(s*s)))",
+      "bottom":"((y-y0)/(s*s))*A*exp(-0.5*((x-x0)*(x-x0)/(s*s)+(y-y0)*(y-y0)/(s*s)+(z-z0)*(z-z0)/(s*s)))",
+      "top":   "-((y-y0)/(s*s))*A*exp(-0.5*((x-x0)*(x-x0)/(s*s)+(y-y0)*(y-y0)/(s*s)+(z-z0)*(z-z0)/(s*s)))",
+      "back":  "((z-z0)/(s*s))*A*exp(-0.5*((x-x0)*(x-x0)/(s*s)+(y-y0)*(y-y0)/(s*s)+(z-z0)*(z-z0)/(s*s)))",
+      "front": "-((z-z0)/(s*s))*A*exp(-0.5*((x-x0)*(x-x0)/(s*s)+(y-y0)*(y-y0)/(s*s)+(z-z0)*(z-z0)/(s*s)))"
+    }
+  }
+  

@@ -1,0 +1,27 @@
+{
+  "parameters": {},
+  "alpha": 1.0,
+  "source": "-13*exp(x + 2*y + 3*z)",
+
+  "exact": {
+    "u": "exp(x + 2*y + 3*z)"
+  },
+
+  "dirichlet": {
+    "left":   "exp(x + 2*y + 3*z)",
+    "right":  "exp(x + 2*y + 3*z)",
+    "bottom": "exp(x + 2*y + 3*z)",
+    "top":    "exp(x + 2*y + 3*z)",
+    "back":   "exp(x + 2*y + 3*z)",
+    "front":  "exp(x + 2*y + 3*z)"
+  },
+
+  "neumann": {
+    "left":   "-exp(x + 2*y + 3*z)",   
+    "right":  "exp(x + 2*y + 3*z)",    
+    "bottom": "-2*exp(x + 2*y + 3*z)", 
+    "top":    "2*exp(x + 2*y + 3*z)",  
+    "back":   "-3*exp(x + 2*y + 3*z)", 
+    "front":  "3*exp(x + 2*y + 3*z)"   
+  }
+}
