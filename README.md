@@ -70,8 +70,8 @@ python3 ./scripts/scanSigma.py \
 <img src="./plots/solution_testcase0_DC_SIPG.png" alt="solution testcase0 DC" width="400"/>
 
 ### Convergence: testcase0
-<img src="./plots/testcase0_brokenL2_SIPG.png" alt="conv testcase0 DC" width="400"/>
-<img src="./plots/testcase0_brokenH1_SIPG.png" alt="conv testcase0 DC" width="400"/>
+<img src="./plots/conv_testcase0_brokenL2_SIPG.png" alt="conv testcase0 DC" width="400"/>
+<img src="./plots/conv_testcase0_brokenH1_SIPG.png" alt="conv testcase0 DC" width="400"/>
 
 ### DG(SIPG) penalty parameter scan: testcase0
 <img src="./plots/scanSigma_testcase0_k3_SIPG.png" alt="sigma testcase0 k3" width="400"/>

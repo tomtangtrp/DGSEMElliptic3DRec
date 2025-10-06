@@ -107,7 +107,7 @@ def plot_one(method, casename, xvals, M, title, ylabel, suffix):
     if drew:
         ax.legend(frameon=True, loc="right", bbox_to_anchor=(1.28,0.5))
     fig.tight_layout()
-    out_png = os.path.join(PLOT_DIR, f"{casename}_3D_{suffix}_{method}.png")
+    out_png = os.path.join(PLOT_DIR, f"conv_{casename}_{suffix}_{method}.png")
     fig.savefig(out_png); plt.close(fig)
     print(f"[saved] {out_png}")
 
