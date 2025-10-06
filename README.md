@@ -27,7 +27,7 @@ sudo apt install libhdf5-dev
 module load eigen/3.3.7
 module load hdf5/1.10.7
 module load intel-mkl/2025.2.0
-module load intel-compiler-llvm/2025.2.0
+odule load intel-compiler-llvm/2025.2.0
 ```
 
 # Build
@@ -67,7 +67,7 @@ python3 ./scripts/scanSigma.py \
 # Demonstration
 ### Solution: testcase0
 <!-- plain mark down fig size is too large: ![solution testcase0 DC](./plots/solution_exponential_DC_SIPG.png) -->
-<img src="./plots/solution_testcase0_DC_SIPG.png" alt="solution testcase0 DC" width="400"/>
+<img src="./plots/solution_testcase0_DC_SIPG.png" alt="solution testcase0 DC" width="600"/>
 
 ### Convergence: testcase0
 <img src="./plots/conv_testcase0_brokenL2_SIPG.png" alt="conv testcase0 DC" width="400"/>
@@ -76,7 +76,7 @@ python3 ./scripts/scanSigma.py \
 ### DG(SIPG) penalty parameter scan: testcase0
 <img src="./plots/scanSigma_testcase0_k3_SIPG.png" alt="sigma testcase0 k3" width="400"/>
 
-### Pardiso OMP scaling vs Matrix Free MPI Jacobi-precondition CG (work in progress):testcase0
+### Pardiso OMP scaling on Gadi single node intel 8268 processor:testcase0
 <img src="./plots/testcase0_SIPG_k2_Nel4096_walltime_vs_cores.png" alt="omp scaling" width="400"/>
 
 
