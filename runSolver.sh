@@ -15,7 +15,7 @@ fi
 
 METHOD="$1"
 CASENAME="$2"
-N1D="${3:-3}"
+N1D="${3:-6}"
 K="${4:-3}"
 BC_SPEC="${5:-L=D,R=D,B=D,T=D,back=D,front=D}"
 
