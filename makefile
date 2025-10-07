@@ -56,7 +56,7 @@ testSolver_spCG: $(SRC_DIR)/testSolver_spCG.o $(SRC_DIR)/gllQuadrature.o $(SRC_D
 # (5) Compile .cpp → .o
 # pattern rule %.0 for object file, %.cpp for source file
 # $< is the first prerequisite afeter: (%.cpp)
-%.o: %.cpp
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 
 # (6) Automatically delete object files after building
